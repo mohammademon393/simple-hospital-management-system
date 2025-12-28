@@ -55,6 +55,7 @@ const Features = () => {
   ];
 
   return (
+    // full features page container
     <div className="bg-white min-h-screen">
       {/* 1. Feature Header */}
       <section className="py-20 px-6 text-center">
