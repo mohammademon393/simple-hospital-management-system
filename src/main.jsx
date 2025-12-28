@@ -11,6 +11,7 @@ import Services from "./Pages/Services.jsx";
 import Features from "./Pages/Features.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Login from "./Pages/Login.jsx";
+import NotFound from "./Pages/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,9 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      { path: "*", 
+        element: <NotFound /> 
       },
     ],
   },

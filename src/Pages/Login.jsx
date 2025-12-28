@@ -15,7 +15,7 @@ const Login = () => {
           to="/"
           className="inline-flex items-center gap-2 text-slate-500 hover:text-blue-600 mb-8 transition font-medium"
         >
-          <FaArrowLeft /> Back to Website
+          <FaArrowLeft /> Back to Home
         </Link>
 
         {/* Login Card */}
