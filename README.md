@@ -27,7 +27,7 @@ If you are developing a production application, we recommend using TypeScript wi
 MediCare Connect is a modern, professional, and fully responsive Hospital Management System frontend built with **React** and **Tailwind CSS**. It is designed to provide a seamless experience for healthcare providers and patients alike.
 
 ## 🚀 Live Demo
-[Add your Vercel/Netlify link here]
+### https://majestic-figolla-5df234.netlify.app/
 
 ## ✨ Features
 - **Modern UI:** Clean and professional slate-blue theme.
