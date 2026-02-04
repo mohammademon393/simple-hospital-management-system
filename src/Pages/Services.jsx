@@ -10,6 +10,7 @@ import {
   FaArrowRight,
   FaVideo,
 } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Services = () => {
   const allServices = [
@@ -198,6 +199,10 @@ const Services = () => {
                   <span className="animate-ping w-3 h-3 bg-white rounded-full"></span>
                   Call Ambulance Now
                 </button>
+                <Link to="/ambulancesDetails" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-red-200 flex items-center gap-3">
+                  <span className="animate-ping w-3 h-3 bg-white rounded-full"></span>
+                  All Ambulance
+                </Link>
               </div>
             </div>
           </div>

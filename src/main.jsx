@@ -12,6 +12,7 @@ import Features from "./Pages/Features.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Login from "./Pages/Login.jsx";
 import NotFound from "./Pages/NotFound.jsx";
+import AmbulanceDetails from "./Components/AmbulanceDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "ambulancesDetails",
+        element: <AmbulanceDetails />,
       },
       { path: "*", 
         element: <NotFound /> 
