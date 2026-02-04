@@ -150,6 +150,106 @@ const About = () => {
           ))}
         </div>
       </section>
+
+      {/* more section ---1 */}
+      {/* Testimonials Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-slate-900 mb-4">
+              What Our Patients Say
+            </h2>
+            <p className="text-slate-500 max-w-2xl mx-auto font-medium">
+              Hear directly from those who have experienced our world-class
+              healthcare services.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "John Doe",
+                role: "Cardiology Patient",
+                text: "The doctors here are extremely professional. The care I received was top-notch and the staff was very supportive.",
+              },
+              {
+                name: "Sarah Smith",
+                role: "Pediatric Care",
+                text: "Best hospital for kids! The environment is very friendly and the pediatricians are highly experienced.",
+              },
+              {
+                name: "Robert Wilson",
+                role: "Regular Checkup",
+                text: "I love the quick appointment system. No long queues, and everything is managed digitally. Highly recommended!",
+              },
+            ].map((review, index) => (
+              <div
+                key={index}
+                className="bg-slate-50 p-8 rounded-[32px] border border-slate-100 hover:shadow-xl transition duration-300"
+              >
+                <div className="flex gap-1 text-orange-400 mb-4 text-xl">
+                  ★★★★★
+                </div>
+                <p className="text-slate-600 italic mb-6">"{review.text}"</p>
+                <div>
+                  <h4 className="font-bold text-slate-900">{review.name}</h4>
+                  <p className="text-sm text-blue-600 font-bold">
+                    {review.role}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* more section ---2 */}
+      {/* FAQ Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black text-slate-900 mb-4">
+              Common Questions
+            </h2>
+            <p className="text-slate-500 font-medium">
+              Everything you need to know about our services and policies.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "How do I book an appointment?",
+                a: "You can book an appointment easily through our website or by calling our 24/7 helpline number.",
+              },
+              {
+                q: "Do you accept international health insurance?",
+                a: "Yes, we accept major international and local health insurance providers.",
+              },
+              {
+                q: "Is emergency service available 24/7?",
+                a: "Absolutely. Our emergency department and ambulance services are open 24 hours a day, 7 days a week.",
+              },
+            ].map((faq, index) => (
+              <details
+                key={index}
+                className="group bg-white rounded-2xl border border-slate-200 p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer"
+              >
+                <summary className="flex items-center justify-between gap-4 font-bold text-slate-900 text-lg">
+                  {faq.q}
+                  <span className="transition group-open:rotate-180 text-blue-600">
+                    ▼
+                  </span>
+                </summary>
+                <p className="mt-4 text-slate-600 leading-relaxed font-medium">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* parant close div */}
     </div>
   );
 };
