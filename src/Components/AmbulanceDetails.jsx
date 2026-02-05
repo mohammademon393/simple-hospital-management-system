@@ -5,6 +5,7 @@ import {
   FaClock,
   FaLocationArrow,
 } from "react-icons/fa";
+import { Link } from "react-router";
 
 const AmbulanceDetails = () => {
   const ambulances = [
@@ -74,13 +75,22 @@ const AmbulanceDetails = () => {
           <span className="bg-red-100 text-red-600 px-6 py-2 rounded-full text-sm font-black uppercase tracking-widest">
             Emergency Fleet
           </span>
-          <h1 className="text-4xl md:text-6xl font-black text-slate-900 mt-6 mb-4">
+          <h1 className="text-3xl md:text-4xl font-black text-slate-900 mt-6 mb-4">
             Our <span className="text-red-600">Ambulance</span> Services
           </h1>
           <p className="text-slate-500 font-medium max-w-2xl mx-auto">
             We provide a wide range of emergency transport services equipped
             with modern medical technology and expert staff.
           </p>
+        </div>
+
+        <div className="mb-10">
+          <Link
+            to="/services"
+            className="px-20 text-blue-600 hover:underline"
+          >
+            ← Back to Service
+          </Link>
         </div>
 
         {/* Ambulance Grid */}

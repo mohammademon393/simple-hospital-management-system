@@ -7,6 +7,7 @@ import {
   FaHospitalUser,
   FaClock,
 } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Home = () => {
   return (
@@ -24,12 +25,12 @@ const Home = () => {
               with our all-in-one medical solution.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition shadow-lg">
+              <Link to="/bookAppointment" className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition shadow-lg">
                 Get Started
-              </button>
-              <button className="bg-white text-blue-600 border border-blue-200 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition">
+              </Link>
+              <Link to="/services" className="bg-white text-blue-600 border border-blue-200 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition">
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
           <div className="relative">
@@ -224,12 +225,12 @@ const Home = () => {
                 rapid response and critical care services anytime you need.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-lg transition shadow-xl shadow-blue-900/20">
+                <Link to="/emergency" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-lg transition shadow-xl shadow-blue-900/20">
                   Call +1-800-MEDICARE
-                </button>
-                <button className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-2xl font-black text-lg transition backdrop-blur-md">
+                </Link>
+                <Link to="/findLocation" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-2xl font-black text-lg transition backdrop-blur-md">
                   Find Our Location
-                </button>
+                </Link>
               </div>
             </div>
 

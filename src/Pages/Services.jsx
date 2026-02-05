@@ -98,7 +98,7 @@ const Services = () => {
           {/* Decorative element */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600 rounded-full blur-[120px] opacity-20"></div>
 
-          <div className="z-10 text-center md:text-left">
+          <div className="z-10 text-center md:text-left ">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Need Emergency Help?
             </h2>
@@ -108,19 +108,21 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="z-10 flex items-center gap-6 bg-white/10 border border-white/20 p-6 rounded-3xl backdrop-blur-md">
-            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl animate-pulse">
-              <FaPhoneAlt />
+          <Link to="/emergency">
+            <div className="z-10 flex items-center gap-6 bg-white/10 border border-white/20 p-6 rounded-3xl backdrop-blur-md">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl animate-pulse">
+                <FaPhoneAlt />
+              </div>
+              <div>
+                <p className="text-blue-400 font-bold uppercase tracking-wider text-sm">
+                  Emergency Call
+                </p>
+                <p className="text-white text-2xl font-extrabold">
+                  +1 (800) 123-4567
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-blue-400 font-bold uppercase tracking-wider text-sm">
-                Emergency Call
-              </p>
-              <p className="text-white text-2xl font-extrabold">
-                +1 (800) 123-4567
-              </p>
-            </div>
-          </div>
+          </Link>
         </div>
       </section>
       {/* more section 1 */}
@@ -199,7 +201,10 @@ const Services = () => {
                   <span className="animate-ping w-3 h-3 bg-white rounded-full"></span>
                   Call Ambulance Now
                 </button> */}
-                <Link to="/ambulancesDetails" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-red-200 flex items-center gap-3">
+                <Link
+                  to="/ambulancesDetails"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-red-200 flex items-center gap-3"
+                >
                   <span className="animate-ping w-3 h-3 bg-white rounded-full"></span>
                   All Ambulance
                 </Link>
