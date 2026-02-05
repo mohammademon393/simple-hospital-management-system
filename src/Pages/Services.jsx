@@ -84,9 +84,12 @@ const Services = () => {
               <p className="text-slate-500 leading-relaxed mb-6">
                 {service.desc}
               </p>
-              <button className="text-blue-600 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <Link
+                to={`/service/${service.title.toLowerCase().replace(/\s+/g, "-")}`}
+                className="text-blue-600 font-bold flex items-center gap-2 group-hover:gap-3 transition-all"
+              >
                 Read More <span className="text-xl">→</span>
-              </button>
+              </Link>
             </div>
           ))}
         </div>

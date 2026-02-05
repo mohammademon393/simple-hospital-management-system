@@ -17,6 +17,8 @@ import Specialists from "./Components/Specialists.jsx";
 import BookAppointment from "./Components/BookAppointment.jsx";
 import Emergency from "./Components/Emergency.jsx";
 import FindLocation from "./Components/FindLocation.jsx";
+import LiveDemo from "./Components/LiveDemo.jsx";
+import ServiceDetail from "./Components/ServiceDetail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "services",
         element: <Services />,
+      },
+      {
+        path: "/service/:serviceName",
+        element: <ServiceDetail></ServiceDetail>,
       },
       {
         path: "features",
@@ -66,6 +72,10 @@ const router = createBrowserRouter([
       {
         path: "findLocation",
         element: <FindLocation />,
+      },
+      {
+        path: "liveDemo",
+        element: <LiveDemo />,
       },
       { path: "*", element: <NotFound /> },
     ],

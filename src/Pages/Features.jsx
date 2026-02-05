@@ -7,6 +7,7 @@ import {
   FaMobileAlt,
   FaRobot,
 } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Features = () => {
   const mainFeatures = [
@@ -142,9 +143,9 @@ const Features = () => {
         <h2 className="text-3xl font-bold text-slate-900 mb-6">
           Ready to upgrade your hospital?
         </h2>
-        <button className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-100">
+        <Link to="/liveDemo" className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-100">
           Request a Live Demo
-        </button>
+        </Link>
       </section>
     </div>
   );

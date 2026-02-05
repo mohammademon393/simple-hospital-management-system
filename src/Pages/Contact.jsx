@@ -7,6 +7,7 @@ import {
   FaFacebook,
   FaTwitter,
   FaLinkedin,
+  FaDirections,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -150,21 +151,26 @@ const Contact = () => {
       </section>
 
       {/* 4. Map Section */}
-      <section className="max-w-7xl mx-auto px-6 mt-16">
-        <div className="w-full h-[400px] bg-slate-200 rounded-[40px] overflow-hidden relative shadow-inner">
-          {/* Fake Map Placeholder - You can replace this with a real Google Map iframe */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500">
-            <FaMapMarkerAlt className="text-5xl text-red-500 mb-4 animate-bounce" />
-            <p className="font-bold text-lg">MediCare Plaza, Health City, NY</p>
-            <p className="text-sm">Interactive Map Integration Here</p>
+      <div className="lg:col-span-2 max-w-7xl mx-auto px-6 mt-16">
+        <div className="bg-white p-4 rounded-[40px] shadow-xl shadow-slate-200/50 border border-slate-100 h-[500px] md:h-full min-h-[500px] relative overflow-hidden group">
+          {/* Google Map Iframe (Placeholder) */}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.254272231177!2d90.3654215!3d23.7985508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0e96fce29dd%3A0x6cb9589713a7c42!2sDhanmondi%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+            className="w-full mx-auto h-[450px] rounded-[32px] grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          {/* Get Directions Overlay Button */}
+          <div className="absolute bottom-10 right-10">
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black flex items-center gap-3 shadow-2xl hover:bg-slate-900 transition-all">
+              <FaDirections className="text-xl" /> Get Directions
+            </button>
           </div>
-          <img
-            src="https://api.maptiler.com/maps/basic-v2/static/-74.006,40.7128,12/1200x400.png?key=get_your_own_key"
-            alt="Map"
-            className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000"
-          />
         </div>
-      </section>
+      </div>
     </div>
   );
 };
