@@ -5,6 +5,7 @@ import {
   FaEnvelope,
   FaStethoscope,
 } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Specialists = () => {
   const [filter, setFilter] = useState("All");
@@ -56,7 +57,7 @@ const Specialists = () => {
       id: 7,
       name: "Dr. Linda Zhao",
       role: "Child Specialist",
-      category: "Pediatrics",
+      category: "Neurology",
       img: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&q=80&w=800",
     },
     {
@@ -64,7 +65,7 @@ const Specialists = () => {
       name: "Dr. David Smith",
       role: "Bone Specialist",
       category: "Orthopedics",
-      img: "https://images.unsplash.com/photo-1622902046580-2b47f47f0871?auto=format&fit=crop&q=80&w=800",
+      img: "https://i.ibb.co/zh2Cj4zZ/Dr-David-Smith-removebg-preview-1.png",
     },
     {
       id: 9,
@@ -85,14 +86,14 @@ const Specialists = () => {
       name: "Dr. Lisa Ray",
       role: "Pediatric Resident",
       category: "Pediatrics",
-      img: "https://images.unsplash.com/photo-1663223030363-22f3068e82a6?auto=format&fit=crop&q=80&w=800",
+      img: "https://i.ibb.co/DDGfbjRk/Dr-Lisa-Ray-removebg-preview.png",
     },
     {
       id: 12,
       name: "Dr. Steven Strange",
       role: "Orthopedic Expert",
       category: "Orthopedics",
-      img: "https://images.unsplash.com/photo-1536064438283-023ea077a20c?auto=format&fit=crop&q=80&w=800",
+      img: "https://i.ibb.co/BKtJ16B4/Dr-Steven-Strange-removebg-preview.png",
     },
   ];
 
@@ -140,6 +141,12 @@ const Specialists = () => {
           </div>
         </div>
 
+        <div className="container mx-auto mb-6">
+          <Link to="/about" className="px-10 text-blue-600 hover:underline">
+          ← Back to About
+        </Link>
+        </div>
+
         {/* Doctors Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {filteredDoctors.map((doc) => (
@@ -148,8 +155,12 @@ const Specialists = () => {
               className="group bg-white rounded-[32px] overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all duration-500"
             >
               {/* Image Area */}
-              <div className="h-64 bg-slate-100 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-500">
-                {doc.img}
+              <div className="h-64 bg-slate-100 flex items-center justify-center overflow-hidden">
+                <img
+                  src={doc.img}
+                  alt={doc.name}
+                  className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
 
               {/* Content */}
@@ -179,10 +190,13 @@ const Specialists = () => {
               </div>
 
               {/* Action Button */}
-              <div className="px-8 pb-8">
-                <button className="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-slate-200">
+              <div className="px-5 pb-8 flex justify-center">
+                <Link
+                  to="/bookAppointment"
+                  className="w-full text-center px-5 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-blue-600 transition-colors shadow-lg shadow-slate-200"
+                >
                   Book Appointment
-                </button>
+                </Link>
               </div>
             </div>
           ))}

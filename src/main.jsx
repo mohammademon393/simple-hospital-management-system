@@ -14,6 +14,7 @@ import Login from "./Pages/Login.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 import AmbulanceDetails from "./Components/AmbulanceDetails.jsx";
 import Specialists from "./Components/Specialists.jsx";
+import BookAppointment from "./Components/BookAppointment.jsx";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "specialists",
         element: <Specialists />,
+      },
+      {
+        path: "bookAppointment",
+        element: <BookAppointment></BookAppointment>,
       },
       { path: "*", element: <NotFound /> },
     ],
