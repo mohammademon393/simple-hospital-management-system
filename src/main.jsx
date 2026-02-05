@@ -13,6 +13,7 @@ import Contact from "./Pages/Contact.jsx";
 import Login from "./Pages/Login.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 import AmbulanceDetails from "./Components/AmbulanceDetails.jsx";
+import Specialists from "./Components/Specialists.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,9 +48,11 @@ const router = createBrowserRouter([
         path: "ambulancesDetails",
         element: <AmbulanceDetails />,
       },
-      { path: "*", 
-        element: <NotFound /> 
+      {
+        path: "specialists",
+        element: <Specialists />,
       },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);

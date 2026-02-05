@@ -6,6 +6,7 @@ import {
   FaProcedures,
   FaHospital,
 } from "react-icons/fa";
+import { Link } from "react-router";
 
 const About = () => {
   // ডামি ডাক্তারদের ডেটা
@@ -149,6 +150,9 @@ const About = () => {
             </div>
           ))}
         </div>
+        <Link to="/specialists" className="block text-center mt-12 text-blue-600 font-bold hover:underline">
+          View All Specialists
+        </Link>
       </section>
 
       {/* more section ---1 */}

@@ -195,10 +195,10 @@ const Services = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-red-200 flex items-center gap-3">
+                {/* <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-red-200 flex items-center gap-3">
                   <span className="animate-ping w-3 h-3 bg-white rounded-full"></span>
                   Call Ambulance Now
-                </button>
+                </button> */}
                 <Link to="/ambulancesDetails" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-red-200 flex items-center gap-3">
                   <span className="animate-ping w-3 h-3 bg-white rounded-full"></span>
                   All Ambulance
